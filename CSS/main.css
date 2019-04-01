@@ -89,3 +89,76 @@
         /*New Addition*/
         animation: moveInLeft 2s ease-out; }
       
+        /* row and column */
+.row {
+  max-width: 154rem; }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row:not(:last-child) {
+    margin-bottom: 3rem; }
+  .row [class^="col-"] {
+    float: left; }
+  .row .col-1-by-2 {
+    width: 47%; }
+    .row .col-1-by-2:not(:last-child) {
+      margin-right: 5%; }
+  .row .col-1-by-3 {
+    width: 31%; }
+    .row .col-1-by-3:not(:last-child) {
+      margin-right: 3%; }
+  .row .col-1-by-4 {
+    background-color: aliceblue;
+    width: 22%; }
+    .row .col-1-by-4:not(:last-child) {
+      margin-right: 3%; }
+
+.section-description {
+  padding: 9rem 7rem;
+  margin: -8rem 0; }
+
+  .Main-Text {
+  font-size: 4rem;
+  font-weight: 600;
+  background-image: linear-gradient(to right, rgba(255, 0, 217, 0.82), #000043);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+  padding: 2rem;
+  transition: all .2s; }
+  .Main-Text:hover {
+    transform: skewY(2deg) skewX(2deg);
+    text-shadow: 0 0.9rem 3rem rgba(0, 0, 0, 0.45); }
+
+p {
+  margin-bottom: 2rem; }
+
+.section-description {
+  padding: 9rem 7rem;
+  margin: -8rem 0; }
+
+.component {
+  position: relative; }
+  .component .photo {
+    width: 55%;
+    z-index: 5;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.43);
+    border-radius: 6px;
+    border: 0.3px solid black;
+    transition: all .2s; }
+    .component .photo-one {
+      position: absolute;
+      top: -2rem;
+      left: 0; }
+    .component .photo-two {
+      position: absolute;
+      top: 2rem;
+      right: 0; }
+    .component .photo-three {
+      position: absolute;
+      top: 10rem;
+      left: 20%; }
+    .component .photo:hover {
+      z-index: 10;
+      transform: scale(1.1); }
