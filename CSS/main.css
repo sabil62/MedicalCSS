@@ -50,6 +50,33 @@
   100% {
     opacity: 0;
     transform: scaleX(2.5) scaleY(1.6); } }
+  
+    @keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-150px); }
+  60% {
+    transform: translateX(20px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(150px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes bottomToTop {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); }
+  }
 
     /* HEADER */
     .header {
@@ -213,3 +240,72 @@ p {
   -webkit-background-clip: text;
   color: transparent;
   font-size: 3.5rem; }
+
+  /* CARDS */
+  .card {
+    height: 28rem;
+    width: 80%;
+    position: relative;
+    perspective: 1000rem; }
+    .card-side {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 30rem;
+      transition: all 2s ease;
+      backface-visibility: hidden;
+      border-radius: 0.3rem;
+      box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.38);
+      border-radius: 0.3rem;
+      overflow: hidden; }
+      .card-side-front {
+        height: 28rem;
+        width: 80%;
+        background-color: #f1ffff; }
+      .card-side-back {
+        height: 28rem;
+        width: 80%;
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+        transform: rotateY(180deg); }
+    .card:hover .card-side-front {
+      transform: rotateY(-180deg); }
+    .card:hover .card-side-back {
+      transform: rotateY(0); }
+    .card-image {
+      height: 45%;
+      background-size: cover;
+      clip-path: polygon(0 0, 100% 0, 100% 76%, 0 100%); }
+      .card-image-1 {
+        background-image: linear-gradient(to right bottom, rgba(214, 140, 219, 0.69), rgba(255, 48, 48, 0.82)), url(images/medical5.jpg); }
+      .card-image-2 {
+        background-image: linear-gradient(to right bottom, rgba(214, 140, 219, 0.69), rgba(255, 48, 48, 0.82)), url(images/medical6.jpg); }
+      .card-image-3 {
+        background-image: linear-gradient(to right bottom, rgba(214, 140, 219, 0.69), rgba(255, 48, 48, 0.82)), url(images/medical2.jpg); }
+    .card-heading {
+      font-size: 2rem;
+      position: absolute;
+      top: 25%;
+      right: 0;
+      width: 50%;
+      text-align: center;
+      line-height: 1.9rem;
+      background-image: linear-gradient(to right bottom, rgba(214, 140, 219, 0.69), rgba(255, 48, 48, 0.82));
+      color: #740005; }
+    .card-description ul {
+      list-style: none;
+      font-size: 1.3rem;
+      text-align: center;
+      line-height: 2.5rem;
+      width: 80%; }
+      .card-description ul li:not(:last-child) {
+        border-bottom: 1px solid #d5d5d5; }
+    .card-money {
+      position: absolute;
+      top: 16%;
+      left: 35%;
+      font-size: 3.2rem;
+      color: wheat; }
+    .card-button {
+      position: absolute;
+      top: 75%;
+      left: 30%; }
