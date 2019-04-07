@@ -309,3 +309,169 @@ p {
       position: absolute;
       top: 75%;
       left: 30%; }
+
+/* STORIES */
+.section-stories-video {
+  margin-top: 9rem;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.73), rgba(255, 165, 165, 0.58)), url(images/medical11.jpg);
+  background-size: cover;
+  height: 52rem; }
+
+.stories {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  height: 25rem; }
+  .stories-each {
+    background-color: rgba(222, 184, 135, 0.67);
+    transform: skewX(-15deg);
+    padding: 2rem 3rem;
+    height: 16rem;
+    width: 70%;
+    backface-visibility: hidden;
+    transition: all 1s;
+    margin: 2rem auto;
+    margin-bottom: 6rem; }
+    .stories-each::after {
+      content: "";
+      display: table;
+      clear: both; }
+    .stories-each:hover .stories-image {
+      filter: blur(3px); }
+    .stories-each:hover .just-text {
+      opacity: 1; }
+  .stories-col-1-by-3 {
+    width: 20%;
+    float: left;
+    transform: skewX(15deg); }
+  .stories-col-2-by-3 {
+    width: 80%;
+    float: right;
+    transform: skewX(15deg); }
+  .stories-h3 {
+    font-size: 1.5rem; }
+  .stories-paragraph {
+    letter-spacing: 0.1rem;
+    font-size: 1.2rem; }
+  .stories-author {
+    position: absolute;
+    top: 85%;
+    right: 0; }
+    .stories-author-profession {
+      margin-top: 2rem; }
+  .stories-image {
+    height: 19rem;
+    clip-path: circle(29% at 39% 40%);
+    z-index: 1; }
+  .stories-image-1 {
+    height: 50%;
+    transform: translateY(3rem); }
+  .stories .just-text {
+    color: #1a1a1a;
+    font-size: 1.8rem;
+    position: absolute;
+    top: 25%;
+    left: 18%;
+    z-index: 3;
+    opacity: 0; }
+
+.section-form {
+  background-image: linear-gradient(to right, rgba(255, 0, 217, 0.63), #000043);
+  margin: 8rem auto;
+  padding: 1rem 0; }
+
+.book {
+  padding: 2rem 2rem;
+  margin: 5rem auto;
+  background-image: linear-gradient(105deg, rgba(255, 255, 170, 0.65) 0%, rgba(255, 255, 170, 0.64) 50%, transparent 50%), url(images/beach.jpg);
+  background-size: cover;
+  width: 65%;
+  height: 18rem;
+  border-radius: 0.3rem; }
+
+.form {
+  width: 50%; }
+  .form-each {
+    position: relative; }
+    .form-each:not(:last-child) {
+      margin-bottom: 3rem; }
+  .form-input {
+    width: 80%;
+    font-size: 1.3rem;
+    padding: 0.3rem 1.5rem; }
+  .form-input:focus {
+    outline: none;
+    border-bottom: 3px solid #02e524; }
+    .form-input:focus:invalid {
+      border-bottom: 3px solid #c20000; }
+  .form-label {
+    font-size: 1.3rem;
+    position: absolute;
+    top: 0.35rem;
+    left: 1.5rem;
+    opacity: 0;
+    transition: all .3s; }
+  .form-input:focus + .form-label {
+    opacity: 1;
+    transform: translateY(1.95rem); }
+  .form-radio-label {
+    font-size: 1.4rem;
+    margin-right: 5rem;
+    cursor: pointer; }
+  .form-button {
+    background-color: #bcf2a2;
+    padding: 0.8rem 2rem;
+    margin-left: 9rem;
+    border: 1px solid #d0d0d0; }
+
+    /* FOOTER */
+    .footer {
+  background-color: #2a2a20;
+  position: relative; }
+  .footer-row {
+    margin-bottom: 2rem;
+    padding: 1rem 5rem; }
+    .footer-row::after {
+      content: "";
+      display: table;
+      clear: both; }
+  .footer-col-1-by-2 {
+    width: 50%;
+    float: left; }
+  .footer-list {
+    list-style: none;
+    border-top: 2px solid wheat;
+    display: inline-block; }
+  .footer-items {
+    display: inline-block;
+    font-size: 1.6rem;
+    padding: 0.5rem;
+    margin-right: 4rem; }
+  .footer-paragraph {
+    color: whitesmoke;
+    border-top: 2px solid wheat;
+    padding: .5rem;
+    font-size: 1.1rem; }
+  .footer-link, .footer-link:link, .footer-link:visited {
+    text-decoration: none;
+    transition: all .5s;
+    color: whitesmoke;
+    display: inline-block; }
+  .footer-link:hover {
+    transform: scaleX(1.6) scaleY(1.4);
+    color: transparent;
+    background-image: linear-gradient(to right, white, red);
+    -webkit-background-clip: text; }
+    .logo-box{
+      width:15rem;
+      margin:2rem auto;
+    }
+.logo{
+  height:12rem;
+  }
+
+  /* ff
+  <logobox>
+  <logo>
+  logoboz{width:15rem
+  margin:0rem auto;} */
