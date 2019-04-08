@@ -470,8 +470,159 @@ p {
   height:12rem;
   }
 
-  /* ff
-  <logobox>
-  <logo>
-  logoboz{width:15rem
-  margin:0rem auto;} */
+  .navigation {
+    position: relative; }
+    .navigation-checkbox {
+      position: fixed;
+      top: 3rem;
+      right: 3rem;
+      opacity: 0.3; }
+    .navigation-button {              
+      position: fixed;
+      top: 2.5rem;
+      right: 2.5rem;
+      height: 3.5rem;
+      width: 3.5rem;
+      border-radius: 50%;
+      z-index: 10000;
+      background-image: url(images/toogle.png);
+      background-size: 100%; }
+    .navigation-checkbox:checked ~ .navigation-background {
+      transform: scale(100); }
+    .navigation-checkbox:checked ~ .navigation-things {
+      opacity: 1; }
+    .navigation-background {
+      position: fixed;
+      top: 2.8rem;
+      display: inline-block;
+      right: 2.8rem;
+      height: 2rem;
+      width: 2rem;
+      border-radius: 50%;
+      background-image: radial-gradient(#9d9dff, #00ff50, #fd0b35);
+      z-index: 500;
+      transition: all .6s; }
+    .navigation-things {
+      opacity: 0;
+      transition: all .3s; }
+    .navigation-list {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 750; }
+    .navigation-link, .navigation-link:link, .navigation-link:visited {
+      text-decoration: none;
+      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+      background-size: 220%;
+      transition: all .5s;
+      color: #efe1e9; }
+    .navigation-link:hover {
+      background-position: 100%;
+      color: #71ffa1; }
+    .navigation-items {
+      list-style: none;
+      color: #4d5838;
+      font-weight: 500;
+      font-size: 2rem; }
+      .navigation-items span {
+        margin-right: 1rem; }
+      .navigation-items:not(:last-child) {
+        margin-bottom: 2rem; }
+  
+  .section-popup {
+    position: fixed;
+    top: 0;
+    bottom: 0; }
+  
+  .popup-background {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.79);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.25);
+    transition: all .5s; }
+  
+  .popup-row {
+    display: table;
+    width: 65%;
+    background-color: #deffff;
+    border-radius: 0.5rem;
+    margin: 15rem auto;
+    height: 20rem; }
+  
+  .popup-left {
+    width: 33%;
+    display: table-cell; }
+  
+  .popup-right {
+    width: 66%;
+    display: table-cell;
+    vertical-align: middle; }
+  
+  .popup-image {
+    width: 100%; }
+  
+  .popup-h3 {
+    text-align: center; }
+  
+  .popup-text {
+    padding: 1rem;
+    column-count: 2;
+    column-gap: 1rem; }
+  
+  .popup-button {
+    font-size: 2rem;
+    padding: 1rem;
+    background-image: linear-gradient(#ffffcf, white); }
+  
+  .popup-background:target {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1); }
+  
+  body {
+    background-color: #e7f5e1;
+    margin-left: 1rem;
+    margin-right: 1rem; }
+  
+  .header {
+    height: 95vh;
+    background-image: linear-gradient(rgba(0, 0, 153, 0.76), rgba(241, 2, 96, 0.8)), url(images/medical10.png);
+    clip-path: polygon(0 0, 100% 0, 100% 72%, 0 100%);
+    position: relative;
+    margin-bottom: -6rem; }
+  
+  .positions {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+  
+  .primary {
+    display: block;
+    font-size: 78px;
+    font-weight: 500;
+    letter-spacing: 44px;
+    line-height: 6rem;
+    color: #faff5f;
+    animation-name: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    /*or simply
+      animation:moveInRight 2s ease-in;
+  */ }
+  
+  .secondary {
+    display: block;
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: 1.2rem;
+    color: #faff9d;
+    /*New Addition*/
+    animation: moveInLeft 2s ease-out; }
+  
